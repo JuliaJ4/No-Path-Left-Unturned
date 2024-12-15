@@ -51,9 +51,9 @@ function setup() {
  
   // Create the return button
   returnButton = createButton("Return to Home Screen");
-  returnButton.position(width * 0.425, height * 0.7); // Positioning on screen
-  returnButton.mousePressed(returnToTitle); // Call returnToTitle function on press
-  returnButton.hide(); // Hide it for now, you can show it at the right stage
+  returnButton.position(width * 0.425, height * 0.7); 
+  returnButton.mousePressed(returnToTitle); 
+  returnButton.hide(); 
   
   //button for artist statement
   button3 = createButton("Credits");
@@ -70,14 +70,13 @@ function setup() {
   playButton.hide();
 }
 function returnToTitle() {
-  gameStage = "title";  // Reset the game to the title stage
-  button.hide();  // Hide other buttons if needed
-  returnButton.hide();  // Hide the return button
+  gameStage = "title";  
+  button.hide();  
+  returnButton.hide(); 
 }
 
 function draw() {
   background(220);
-  // switch statement to draw desired scene
   switch (gameStage) {
     case "title":
       mainText.titleDisplay();
@@ -143,7 +142,7 @@ function showArtistStatement() {
 function artistStatementDisplay() {
   button3.hide();
   playButton.hide();
-  background('#f1f1f1');  // Light background for the artist statement
+  background('#f1f1f1');  
   fill('#000');
   textAlign(CENTER);
   textSize(30);
@@ -180,7 +179,6 @@ function startGame(){
   playButton.hide();   
 }
 
-// function to change to next stage based on choice
 function mouseReleased() {
   switch (gameStage) {
     case "info":
@@ -347,7 +345,7 @@ function mouseReleased() {
       gameStage = "title";
       result = null;
       choice = null;
-      button.hide(); // Hide the button once game restarts
+      button.hide(); 
       return;  
   }
 }
@@ -580,7 +578,7 @@ stage4bDisplay() {
       text("Turn the lights on and then check the window to see if he is there, if he is, call the police.", width*0.60,height*0.45, 400);
 }
 }
-// game over display with win or lose logic
+
 function gameOver() {
   if (result == "bad") {
     returnButton.hide();
@@ -644,7 +642,7 @@ function gameOver() {
   text("Click to restart.", width *0.415,height*0.80, 300);
 }
 
-// change background color on mouse hover
+
 function mouseHighlight() {
   noStroke();
   fill(162, 179, 179);
