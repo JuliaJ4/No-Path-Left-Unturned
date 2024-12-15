@@ -51,7 +51,7 @@ function setup() {
  
   // Create the return button
   returnButton = createButton("Return to Home Screen");
-  returnButton.position(width * 0.45, height * 0.7); // Positioning on screen
+  returnButton.position(width * 0.425, height * 0.7); // Positioning on screen
   returnButton.mousePressed(returnToTitle); // Call returnToTitle function on press
   returnButton.hide(); // Hide it for now, you can show it at the right stage
   
@@ -150,7 +150,7 @@ function artistStatementDisplay() {
   textFont(font2);
   text("Artist Statement", width * 0.495, height * 0.1);
   textSize(20);
-  text("Telling stories is the root of most art, whether communicated through words or through symbols of illustrations. I have decided to create an interactive experience of what it is like to be a woman walking home late at night. I think that the game is entertaining in the way that the choices are connected and how interactive it is for the player. It also covers the real struggle and battle that women face at night. It is almost habitual to expect an attack at night, so the list of scenarios in the game are actually personal thoughts that go throughout my own head. I am a Persian and Arab woman who used to have a different birth name, so I decided to embrace my heritage by using that name in this game as the main character, Yalda.", width * 0.2, height * 0.3,950);
+  text("Telling stories is the root of most art, whether communicated through words or through symbols of illustrations. I have decided to create an interactive experience of what it is like to be a woman walking home late at night. I think that the game is entertaining in the way that the choices are connected and how interactive it is for the player. It also covers the real struggle and battle that women face at night. It is almost habitual to expect an attack at night, so the list of scenarios in the game are actually personal thoughts that go throughout my own head. I am a Persian and Arab woman who used to have a different birth name, so I decided to embrace my heritage by using that name in this game as the main character, Yalda.", width * 0.225, height * 0.3,950);
  returnButton.show();
 }
 function showCredits(){
@@ -167,8 +167,8 @@ function showCreditsDisplay(){
   textFont(font2);
   text("Credits", width * 0.495, height * 0.1);
   textSize(20);
-  text("Created by Julia Johansson", width * 0.2, height * 0.3,950);
-  text("Purple Planet Music", width * 0.2, height * 0.4,950);
+  text("Created by Julia Johansson", width * 0.225, height * 0.3,950);
+  text("Purple Planet Music", width * 0.225, height * 0.4,950);
   returnButton.show();
 }
 function startGame(){
