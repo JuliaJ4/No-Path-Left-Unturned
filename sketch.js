@@ -9,7 +9,6 @@ let button2;
 let button3;
 let returnButton;
 let playButton;
-//let isPlaying = false;
 let gameStarted = false;
 function preload(){
   font1 = loadFont('assets/TradeWinds-Regular.ttf');
@@ -30,7 +29,7 @@ function preload(){
 }
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  //song.loop();
+ 
   // establish initial game stage
   mainText = new userChoice("No Path Left Unturned");
   gameStage = "title";
@@ -171,7 +170,6 @@ function showCreditsDisplay(){
   returnButton.show();
 }
 function startGame(){
- //isPlaying = true;
   song.stop();
   gameStarted = true;
   gameStage = "info";  
@@ -217,17 +215,9 @@ function mouseReleased() {
       }
       break;
     case "stage1b":
-      /*if (mouseX < width / 2) {
-        choice = true;
-      } else {
-        choice = false;
-      }*/
       if (choice) {
         gameStage = "stage2";
-      } /*else if (!choice) {
-        result = "bad";
-        gameStage = "gameOver";
-      }*/
+      } 
       break;
     case "stage2":
       if (mouseX < width / 2) {
@@ -244,18 +234,10 @@ function mouseReleased() {
       }
       break;
     case "stage2a":
-      /*if (mouseX < width / 2) {
-        choice = false;
-      } else {
-        choice = true;
-      }*/
       if (choice) {
         result = "good";
         gameStage = "stage3";
-      } /*else if (!choice) {
-        result = "bad2";
-        gameStage = "gameOver";
-      }*/
+      } 
       break;
     case "stage3":
       if (mouseX < width / 2) {
@@ -272,18 +254,10 @@ function mouseReleased() {
       }
       break;
     case "stage3a":
-      /*if (mouseX < width / 2) {
-        choice = true;
-      } else {
-        choice = false;
-      } */
       if (choice) {
         result = "good";
         gameStage = "stage4";
-      } /* else if (!choice) {
-        result = "bad2";
-        gameStage = "gameOver";
-      } */
+      }
       break;
     case "stage4":
       if (mouseX < width / 2) {
@@ -300,18 +274,10 @@ function mouseReleased() {
       }
       break;
     case "stage4a":
-      /*if (mouseX < width / 2) {
-        choice = true;
-      } else {
-        choice = false;
-      }*/
       if (choice) {
         result = "good";
         gameStage = "stage5";
-      } /*else if (!choice) {
-        result = "bad2";
-        gameStage = "gameOver";
-      }*/
+      } 
       break;
      case "stage4b":
       if (mouseX < width / 2) {
